@@ -68,12 +68,14 @@
             <h1>Project & Skills</h1>
             <p>Check out my project and skill!</p>
             <div class="about__button">
-                <button class="portfolio-btn active">Project</button>
-                <button class="skill-btn">Skills</button>
+                <button class="portfolio-btn">Project</button>
+                <button class="skill-btn active">Skills</button>
             </div>
         </div>
-        <article class="portfolio">
-            <h2>Portfolio</h2>
+        <article class="portfolio hide">
+            <div class="article-header">
+                <h2>Portfolio</h2>
+            </div>
             <div class="portfolio-wrapper">
                 <div class="card">
                     <div class="card__image">
@@ -95,9 +97,57 @@
                 </div>
             </div>
         </article>
-        <article class="skill hide">
-            <h2>Skills</h2>
-            .
+        <article class="skill">
+            <div class="article-header">
+                <h2>Skills</h2>
+            </div>
+            <div class="skill__wrapper">
+                <div class="skill__row skill-checklist">
+                    <div class="checklist-card">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Fully Responsive Website</p>
+                    </div>
+                    <div class="checklist-card">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Custom Design Website</p>
+                    </div>
+                </div>
+                <div class="skill__row card-wrapper">
+                    <div class="skill-card">
+                        <div class="card__front">
+                            <img src="/img/html5-svgrepo-com.svg" alt="html-5">
+                        </div>
+                        <div class="card__back">
+                            <p>HTML</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card__front">
+                            <img src="/img/css-svgrepo-com.svg" alt="css">
+                        </div>
+                        <div class="card__back">
+                            <p>CSS</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card__front">
+                            <img src="/img/javascript-svgrepo-com.svg" alt="Javascript">
+                        </div>
+                        <div class="card__back">
+                            <p>Javascript</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card__front">
+                            <img src="/img/logo-react-svgrepo-com.svg" alt="ReactJS">
+                        </div>
+                        <div class="card__back">
+                            <p>ReactJS</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <h2>skill C</h2> -->
+            </div>
         </article>
     </section>
 

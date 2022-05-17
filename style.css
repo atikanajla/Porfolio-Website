@@ -8,6 +8,7 @@
     --clr-secondary-2: rgb(231, 231, 231);
     --text-primary: black;
     --box-shadow: 0px 0px 50px 0px rgb(0 0 0/10%);
+    --box-shadow-2: 0px 0px 20px 0px rgb(0 0 0/10%);
     --box-shading: 0 0 25px rgb(87, 87, 87);
     --background-dark: linear-gradient(117deg, rgba(88,8,142,1) 0%, rgba(0,0,50,1) 91%);
 }
@@ -92,6 +93,12 @@ p{
 .container-center{
     padding-top: 5em;
     padding-bottom: 5em;
+}
+
+.article-header{
+    text-align: center;
+    line-height: 1rem;
+    padding-top: 1em;
 }
 
 .btn{
@@ -471,6 +478,12 @@ p{
     font-size: 1.2rem;
 }
 
+.portfolio,
+.skill{
+    box-shadow: var(--box-shadow-2);
+    padding: 1em 2em;
+}
+
 .active{
     background-color: var(--clr-primary-2) !important;
     color: var(--clr-primary);
@@ -483,12 +496,6 @@ p{
 
 
 /* ----portfolio---- */
-
-.portfolio h2{
-    text-align: center;
-    line-height: 1rem;
-    padding-top: 1em;
-}
 
 .portfolio-wrapper{
     margin-top: 3em;
@@ -587,6 +594,115 @@ p{
 
 /* -----skills----- */
 
+.skill__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.skill__row{
+    margin: 3em 0;
+}
+
+.card-wrapper{
+    display: inline-flex;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+
+}
+
+
+/* ------checklist-card----- */
+
+.skill-checklist{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.checklist-card{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+    border-radius: 15px;
+    background-color: var(--clr-secondary-2);
+    color: var(--clr-primary-2);
+    padding: 1em 2em;
+}
+
+/* .checklist-card > *{
+    padding: .5em;
+    color: var(--dark-primary);
+} */
+
+.checklist-card p{
+    font-size: 1.2rem;
+}
+
+.checklist-card i{
+    font-size: 2rem;
+}
+
+.checklist-card:last-child{
+    border-bottom: none;
+}
+
+.checklist-card:hover > *{
+    transform: scale(1.05);
+    transition: transform .3s;
+}
+
+/* ------skill-card----- */
+
+.skill-card{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.card__front,
+.card__back
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 1.5em;
+    border-radius: 50%;
+    transition: transform .5s linear;
+    backface-visibility: hidden;
+}
+.card__front{
+    transform: perspective(300px) rotateY(0deg);
+    background-color: var(--clr-primary-2);   
+}
+
+.card__front > *{
+    width: 100%;
+}
+
+.card__back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    background-color: var(--clr-secondary-2);
+    transform: perspective(300px) rotateY(180deg);
+}
+
+.skill-card:hover > .card__front{
+    transform: perspective(300px) rotateY(180deg);
+}
+
+.skill-card:hover > .card__back{
+    transform: perspective(300px) rotateY(0deg);
+}
+
+/* ------end card----- */
 
 /* -------------------- */
 /* CFA       */
