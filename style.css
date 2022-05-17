@@ -5,8 +5,10 @@
     --clr-primary: white;
     --clr-primary-2: hsl(240, 100%, 10%);
     --clr-secondary: #29b9f9;
+    --clr-secondary-2: rgb(231, 231, 231);
     --text-primary: black;
     --box-shadow: 0px 0px 50px 0px rgb(0 0 0/10%);
+    --box-shading: 0 0 25px rgb(87, 87, 87);
     --background-dark: linear-gradient(117deg, rgba(88,8,142,1) 0%, rgba(0,0,50,1) 91%);
 }
 
@@ -458,17 +460,19 @@ p{
 .about__button{
     display: inline-block;
     margin: 2em 0;
+    background-color: var(--clr-secondary-2);
     border: var(--clr-primary-2) 2px solid;
 }
 
 .about__button button{
+    background-color: var(--clr-secondary-2);
     border: none;
     padding: 1rem 2rem;
     font-size: 1.2rem;
 }
 
 .active{
-    background-color: var(--clr-primary-2);
+    background-color: var(--clr-primary-2) !important;
     color: var(--clr-primary);
 }
 
@@ -476,6 +480,104 @@ p{
     display: none !important;
 }
 
+
+
+/* ----portfolio---- */
+
+.portfolio{
+    margin-top: 3em;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+}
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    box-shadow: var(--box-shadow);
+    background-color: var(--clr-primary);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card::before,
+.card::after{
+    content:"";
+    position: absolute;
+    top: 95%;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    box-shadow: var(--box-shading);
+    z-index: -1;
+}
+
+.card::before{
+    transform: rotate(3deg);
+}
+
+.card::after{
+    transform: rotate(-3deg);
+}
+
+.card__image img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card__info{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    height: 100%;
+}
+
+.card__info p{
+    flex: 1;
+}
+
+.card__info-tag{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--clr-secondary-2);
+    border-radius: 5px;
+    padding: .5em;
+}
+
+.card__info-tag > span{
+    padding: 5px;
+    margin: 5px;
+    background-color: var(--clr-primary);
+}
+
+.card__btn{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    border-radius: 5px;
+}
+
+.card__btn a{
+    font-size: .9em;
+    background-color: var(--clr-primary-2);
+    margin: 0;
+    padding: 5px 10px;
+}
+
+@media screen and (max-width: 960px) {
+    .portfolio{
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+}
+@media screen and (max-width: 768px) {
+    .portfolio{
+        grid-template-columns: 1fr;
+    }
+}
 
 /* -------------------- */
 /* CFA       */
