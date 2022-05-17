@@ -205,6 +205,10 @@ p{
     font-size: 1.8em;
 }
 
+.slide{
+    transform: translateX(0) !important;
+}
+
 @media screen and (max-width: 780px) {
     .site-logo{
         flex: 1;
@@ -218,6 +222,7 @@ p{
         flex-direction: column;
         background-color: var(--clr-primary);
         transform: translateY(-100%);
+        z-index: 99;
     }
 
     .navbar .icon{
@@ -445,6 +450,33 @@ p{
 /* ABOUT      */
 /* ---------------------*/
 
+.about__header{
+    text-align: center;
+}
+
+/* about__button */
+.about__button{
+    display: inline-block;
+    margin: 2em 0;
+    border: var(--clr-primary-2) 2px solid;
+}
+
+.about__button button{
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+.active{
+    background-color: var(--clr-primary-2);
+    color: var(--clr-primary);
+}
+
+.hide{
+    display: none !important;
+}
+
+
 /* -------------------- */
 /* CFA       */
 /* ---------------------*/
@@ -456,4 +488,31 @@ p{
 /* ---------------------*/
 .footer{
     background-color: var(--clr-primary-2);
+}
+
+
+
+/* -------------------------- */
+.btn-light:hover{
+    color: var(--clr-primary);
+    background: var(--clr-primary-2);
+    border: 2px solid var(--clr-primary);
+}
+
+.btn-light{
+    background: var(--clr-primary);
+    color: var(--clr-primary-2);
+    border: 2px solid var(--clr-primary-2);
+}
+.btn-dark{
+    color: var(--clr-primary);
+    background: var(--clr-primary-2);
+    border: 2px solid var(--clr-primary-2);
+}
+
+.btn-dark:hover{
+    background: var(--clr-primary);
+    color: var(--clr-primary-2);
+    border: 2px solid var(--clr-primary-2);
+    box-sizing: border-box;
 }
