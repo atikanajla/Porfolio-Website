@@ -490,7 +490,7 @@ p{
     padding-top: 1em;
 }
 
-.wrapper{
+.portfolio-wrapper{
     margin-top: 3em;
     display: grid;
     grid-gap: 2rem;
@@ -575,12 +575,12 @@ p{
 }
 
 @media screen and (max-width: 960px) {
-    .wrapper{
+    .portfolio-wrapper{
         grid-template-columns: repeat(2, minmax(0,1fr));
     }
 }
 @media screen and (max-width: 768px) {
-    .wrapper{
+    .portfolio-wrapper{
         grid-template-columns: 1fr;
     }
 }
