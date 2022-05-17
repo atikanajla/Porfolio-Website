@@ -233,6 +233,7 @@ p{
     display: flex;
     width: 100%;
     flex: 1;
+    color: white;
 }
 
 /* pic-component-start */
@@ -324,6 +325,10 @@ p{
     padding: 2em 0;
 }
 
+.content__wrapper h3{
+    color: var(--clr-secondary);
+}
+
 @media screen and (max-width: 780px) {
     .header-content{
         flex-direction: column;
@@ -332,6 +337,11 @@ p{
     .content__wrapper{
         text-align: center;
     }
+}
+
+.content__sm a{
+    color: var(--clr-primary);
+    font-size: 1.5rem;
 }
 
 /* -------------SCROLL---------- */
