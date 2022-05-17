@@ -339,9 +339,34 @@ p{
     }
 }
 
+/* -------------SOCIAL MEDIA BUTTONS---------- */
+
+.content__sm{
+    display: flex;
+    font-size: 2rem;
+    padding: 1em 0;
+}
+
+.content__sm li{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.content__sm li:hover{
+    background-color: white;
+}
+
 .content__sm a{
     color: var(--clr-primary);
     font-size: 1.5rem;
+}
+
+.content__sm li:hover a{
+    color: var(--clr-primary-2);
 }
 
 /* -------------SCROLL---------- */
