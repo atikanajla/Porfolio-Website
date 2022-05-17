@@ -484,7 +484,13 @@ p{
 
 /* ----portfolio---- */
 
-.portfolio{
+.portfolio h2{
+    text-align: center;
+    line-height: 1rem;
+    padding-top: 1em;
+}
+
+.wrapper{
     margin-top: 3em;
     display: grid;
     grid-gap: 2rem;
@@ -569,15 +575,18 @@ p{
 }
 
 @media screen and (max-width: 960px) {
-    .portfolio{
+    .wrapper{
         grid-template-columns: repeat(2, minmax(0,1fr));
     }
 }
 @media screen and (max-width: 768px) {
-    .portfolio{
+    .wrapper{
         grid-template-columns: 1fr;
     }
 }
+
+/* -----skills----- */
+
 
 /* -------------------- */
 /* CFA       */
