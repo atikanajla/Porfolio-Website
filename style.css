@@ -24,6 +24,48 @@ a{
 li{
     list-style: none;
 }
+
+
+/* -----------font--------- */
+
+h1{
+    font-size: 5rem;
+    line-height: 6rem;
+}
+
+h2{
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+h3{
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+p{
+    font-size: 1.4em;
+    line-height: 1.5em;
+}
+
+@media screen and (max-width: 576px) {
+    h1{
+        font-size: 3rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+}
+
 /* -------------------- */
 /* global classes       */
 /* ---------------------*/
@@ -197,6 +239,7 @@ li{
 .author-pic{
     flex: 1;
     display: flex;
+    justify-content: center;
     position: relative;
 }
 
@@ -276,13 +319,18 @@ li{
 .content__wrapper{
     display: flex;
     flex: 1;
-    order: 1;
     flex-direction: column;
+    width: 100%;
+    padding: 2em 0;
 }
 
 @media screen and (max-width: 780px) {
     .header-content{
         flex-direction: column;
+    }
+
+    .content__wrapper{
+        text-align: center;
     }
 }
 
