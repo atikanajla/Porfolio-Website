@@ -52,8 +52,8 @@ h4{
 }
 
 p{
-    font-size: 1.4em;
-    line-height: 1.5em;
+    font-size: 1em;
+    line-height: 1.3em;
 }
 
 @media screen and (max-width: 576px) {
@@ -74,7 +74,7 @@ p{
     }
 
     p{
-        font-size: 1rem;
+        font-size: .8rem;
     }
 }
 
@@ -489,7 +489,7 @@ p{
 
 .portfolio,
 .skill{
-    box-shadow: var(--box-shadow-2);
+    /* box-shadow: var(--box-shadow-2); */
     padding: 1em 2em;
 }
 
